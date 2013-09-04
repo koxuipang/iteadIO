@@ -12,39 +12,6 @@
 #include <regmap.h>
 #include <pinmap.h>
 
-// for gpio_8_bit_bus
-typedef struct{
-	unsigned char D0;
-	unsigned char D1;
-	unsigned char D2;
-	unsigned char D3;
-	unsigned char D4;
-	unsigned char D5;
-	unsigned char D6;
-	unsigned char D7;
-}STRUCT_8BITS_BUS;
-
-// for gpio_16_bit_bus
-typedef struct{
-	unsigned char D0;
-	unsigned char D1;
-	unsigned char D2;
-	unsigned char D3;
-	unsigned char D4;
-	unsigned char D5;
-	unsigned char D6;
-	unsigned char D7;
-	unsigned char D8;
-	unsigned char D9;
-	unsigned char D10;
-	unsigned char D11;
-	unsigned char D12;
-	unsigned char D13;
-	unsigned char D14;
-	unsigned char D15;
-}STRUCT_16BITS_BUS;
-
-
 #define INPUT 			0
 #define OUTPUT 			1
 #define	PWM_OUTPUT		2
@@ -85,6 +52,37 @@ typedef struct{
 #define _MMAP_SIZE		4096
 #define _MMAP_MASK		(_MMAP_SIZE - 1)
 #define __BLOCK_SIZE 		512
+// for gpio_8_bit_bus
+typedef struct{
+	unsigned char D0;
+	unsigned char D1;
+	unsigned char D2;
+	unsigned char D3;
+	unsigned char D4;
+	unsigned char D5;
+	unsigned char D6;
+	unsigned char D7;
+}STRUCT_8BITS_BUS;
+
+// for gpio_16_bit_bus
+typedef struct{
+	unsigned char D0;
+	unsigned char D1;
+	unsigned char D2;
+	unsigned char D3;
+	unsigned char D4;
+	unsigned char D5;
+	unsigned char D6;
+	unsigned char D7;
+	unsigned char D8;
+	unsigned char D9;
+	unsigned char D10;
+	unsigned char D11;
+	unsigned char D12;
+	unsigned char D13;
+	unsigned char D14;
+	unsigned char D15;
+}STRUCT_16BITS_BUS;
 
 /**************************for digital and time function***************************************/
 extern int 					pinMode(int pin, int mode);
