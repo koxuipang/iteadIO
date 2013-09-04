@@ -60,6 +60,31 @@ typedef struct{
 #define UART4			13
 #define UART7 			14
 
+#define _A10_GPIO_BASE   	(0x01C20800)
+#define _A10_PWM_BASE    	(0x01C20e00)
+#define _GPIO_BASE		(0x01C20000)
+#define _GPIO_PWM		(0x01c20000)
+
+#define _LOW			0 	
+#define _HIGH			1
+#define fd_nu 			1
+#define speed_nu 		2
+#define SPI0 			0
+#define SPI1			1
+
+#define	_MAX_PINS		144
+
+#define I2C_BLOCK_MAX     	32
+#define I2C_READ          	1
+#define I2C_WRITE         	0
+#define I2C_BYTE_DATA     	2
+#define I2C_WORD_DATA	  	3
+#define I2C1              	1
+#define I2C2              	2
+
+#define _MMAP_SIZE		4096
+#define _MMAP_MASK		(_MMAP_SIZE - 1)
+#define __BLOCK_SIZE 		512
 
 /**************************for digital and time function***************************************/
 extern int 					pinMode(int pin, int mode);
